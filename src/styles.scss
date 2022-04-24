@@ -1,1 +1,187 @@
-// Add your styles below! (feel free to delete this comment)
+* {
+  box-sizing: border-box;
+}
+
+%image_centered {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #e2e2e2;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  .card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 16%;
+    background: #FFFFFF;
+    border: 1px solid #E0E7F1;
+    border-radius: 6px;
+    overflow: hidden;
+
+    .green_border {
+      width: 4px;
+      height: 100%;
+      background: #23856D;
+    }
+
+    .image {
+      width: 80px;
+      height: 80px;
+      margin: 0 3%;
+      @extend %image_centered;
+      background-image: url('./assets/avatar-naomi@2x.png');
+    }
+
+    .info_wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 66%;
+      font-weight: 500;
+      color: #526275;
+      font-size: 14px;
+
+      .title {
+        color: #263240;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 2%;
+      }
+
+      .box,
+      .pin_box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2%;
+
+        .time_box {
+          display: flex;
+          align-items: center;
+          width: 25%;
+        }
+
+        .calendar_box {
+          display: flex;
+          align-items: center;
+          width: 75%;
+        }
+
+        .icon {
+          width: 16px;
+          height: 16px;
+          margin-right: 6px;
+          @extend %image_centered;
+
+          &.time {
+            background-image: url('./assets/icon-clock.svg');
+          }
+
+          &.calendar {
+            margin-left: 6%;
+            background-image: url('./assets/icon-calendar-alt.svg');
+          }
+
+          &.pin {
+            background-image: url('./assets/icon-map-pin.svg');
+          }
+        }
+      }
+
+      .pin_box {
+        margin-bottom: 0;
+      }
+
+      .box:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .options {
+      position: absolute;
+      right: 4%;
+      width: 16px;
+      height: 16px;
+      @extend %image_centered;
+      background-image: url('./assets/icon-options.svg');
+    }
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .container {
+    .card {
+      width: 70%;
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+  .container {
+    .card {
+      flex-direction: column;
+      width: 80%;
+      height: 40%;
+
+      .green_border {
+        position: absolute;
+        left: 0;
+      }
+
+      .image {
+        margin: 6% 0;
+      }
+
+      .info_wrapper {
+        align-items: center;
+
+        .title {
+          margin-bottom: 6%;
+        }
+
+        .box {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-bottom: 0;
+
+          .time_box,
+          .calendar_box {
+            width: 100%;
+            margin-bottom: 5%;
+          }
+
+          .icon {
+            &.calendar {
+              margin-left: 0;
+            }
+          }
+        }
+
+        .pin_box {
+          width: 100%;
+          margin-bottom: 0;
+        }
+      }
+
+      .options {
+        top: 8%;
+        transform: rotate(90deg);
+      }
+    }
+  }
+}

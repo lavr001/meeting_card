@@ -1,3 +1,6 @@
 # Candidate notes
 
-Add any notes here you'd like for reviewers to see in regard to your challenge submission.
+## Added two breakpoints for responsiveness
+
+* From 769px to 992px to cover most of the tablets
+* From 360px to 768px to cover most of the mobile devices (changed a layout for a mobile view)

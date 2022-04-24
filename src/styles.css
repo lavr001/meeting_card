@@ -1,1 +1,131 @@
-/* Add your styles below! (feel free to delete this comment) */
+* {
+  box-sizing: border-box; }
+
+.container .card .image, .container .card .info_wrapper .box .icon,
+.container .card .info_wrapper .pin_box .icon, .container .card .options {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain; }
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #e2e2e2; }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; }
+  .container .card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 16%;
+    background: #FFFFFF;
+    border: 1px solid #E0E7F1;
+    border-radius: 6px;
+    overflow: hidden; }
+    .container .card .green_border {
+      width: 4px;
+      height: 100%;
+      background: #23856D; }
+    .container .card .image {
+      width: 80px;
+      height: 80px;
+      margin: 0 3%;
+      background-image: url("./assets/avatar-naomi@2x.png"); }
+    .container .card .info_wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 66%;
+      font-weight: 500;
+      color: #526275;
+      font-size: 14px; }
+      .container .card .info_wrapper .title {
+        color: #263240;
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 2%; }
+      .container .card .info_wrapper .box,
+      .container .card .info_wrapper .pin_box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2%; }
+        .container .card .info_wrapper .box .time_box,
+        .container .card .info_wrapper .pin_box .time_box {
+          display: flex;
+          align-items: center;
+          width: 25%; }
+        .container .card .info_wrapper .box .calendar_box,
+        .container .card .info_wrapper .pin_box .calendar_box {
+          display: flex;
+          align-items: center;
+          width: 75%; }
+        .container .card .info_wrapper .box .icon,
+        .container .card .info_wrapper .pin_box .icon {
+          width: 16px;
+          height: 16px;
+          margin-right: 6px; }
+          .container .card .info_wrapper .box .icon.time,
+          .container .card .info_wrapper .pin_box .icon.time {
+            background-image: url("./assets/icon-clock.svg"); }
+          .container .card .info_wrapper .box .icon.calendar,
+          .container .card .info_wrapper .pin_box .icon.calendar {
+            margin-left: 6%;
+            background-image: url("./assets/icon-calendar-alt.svg"); }
+          .container .card .info_wrapper .box .icon.pin,
+          .container .card .info_wrapper .pin_box .icon.pin {
+            background-image: url("./assets/icon-map-pin.svg"); }
+      .container .card .info_wrapper .pin_box {
+        margin-bottom: 0; }
+      .container .card .info_wrapper .box:last-child {
+        margin-bottom: 0; }
+    .container .card .options {
+      position: absolute;
+      right: 4%;
+      width: 16px;
+      height: 16px;
+      background-image: url("./assets/icon-options.svg"); }
+
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .container .card {
+    width: 70%; } }
+
+@media only screen and (min-width: 360px) and (max-width: 768px) {
+  .container .card {
+    flex-direction: column;
+    width: 80%;
+    height: 40%; }
+    .container .card .green_border {
+      position: absolute;
+      left: 0; }
+    .container .card .image {
+      margin: 6% 0; }
+    .container .card .info_wrapper {
+      align-items: center; }
+      .container .card .info_wrapper .title {
+        margin-bottom: 6%; }
+      .container .card .info_wrapper .box {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0; }
+        .container .card .info_wrapper .box .time_box,
+        .container .card .info_wrapper .box .calendar_box {
+          width: 100%;
+          margin-bottom: 5%; }
+        .container .card .info_wrapper .box .icon.calendar {
+          margin-left: 0; }
+      .container .card .info_wrapper .pin_box {
+        width: 100%;
+        margin-bottom: 0; }
+    .container .card .options {
+      top: 8%;
+      transform: rotate(90deg); } }
+
+/*# sourceMappingURL=styles.css.map */
